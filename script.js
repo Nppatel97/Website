@@ -16,60 +16,63 @@ $(window).scroll(function() {
     $(".iBox").css("opacity", 1 - scroll / 500);
 
     // Decrease the top margin and increase the opacity of the image on left in "About Me" section  
-    $(".myImg").css("margin-top", 50 - scroll / 5);
+    if (window.innerWidth > 768)
+        $(".myImg").css("margin-top", 50 - scroll / 5);
 
     //----- 1.2. This code converts the Individual Sections from card forms to full width sections and vice versa for: -----
 
-    // Introduction Div
-    if (scroll > 80) {
-        $(".logoMini").slideDown();
-        $(".iBox").css("width", "90%");
-        $(".iBox").css("border-radius", "10px");
-    } else {
-        $(".logoMini").fadeOut();
-        $(".iBox").css("width", "100%");
-        $(".iBox").css("border-radius", "0px");
+    if (window.innerWidth > 768) {
+        // Introduction Div
+        if (scroll > 80) {
+            $(".logoMini").slideDown();
+            $(".iBox").css("width", "90%");
+            $(".iBox").css("border-radius", "10px");
+        } else {
+            $(".logoMini").fadeOut();
+            $(".iBox").css("width", "100%");
+            $(".iBox").css("border-radius", "0px");
+        }
+
+        // "About Me" Section
+        if (scroll > 650 && scroll < 850) {
+            $(".aBox").addClass("stick");
+            $(".aBox").css("width", "100%");
+            $(".aBox").css("border-radius", "0px");
+            $(".imgB1").css("animation", "up 3.5s ease-in-out, side 1s ease-in-out infinite alternate");
+            $(".imgB2").css("animation", "up 2.6s ease-in-out, side 1s ease-in-out infinite alternate");
+            $(".imgB3").css("animation", "up 3.9s ease-in-out, side 1s ease-in-out infinite alternate");
+            $(".imgB4").css("animation", "up 3s ease-in-out, side 1s ease-in-out infinite alternate");
+        } else {
+            $(".aBox").css("width", "96%");
+            $(".aBox").removeClass("stick");
+            $(".aBox").css("border-radius", "10px");
+        }
+
+        // "Skills" Section
+        if (scroll > 1400 && scroll < 1650) {
+            $(".sBox").addClass("stick");
+            $(".sBox").css("width", "100%");
+            $(".sBox").css("border-radius", "0px");
+        } else {
+            $(".sBox").css("width", "96%");
+            $(".sBox").removeClass("stick");
+            $(".sBox").css("border-radius", "10px");
+
+        }
+
+        // "Academics" Section
+        if (scroll > 2350 && scroll < 2650) {
+            $(".acBox").addClass("stick");
+            $(".acBox").css("width", "100%");
+            $(".acBox").css("border-radius", "0px");
+        } else {
+            $(".acBox").css("width", "96%");
+            $(".acBox").removeClass("stick");
+            $(".acBox").css("border-radius", "10px");
+
+        }
+        //----- 1.2. ENDS here -----
     }
-
-    // "About Me" Section
-    if (scroll > 650 && scroll < 850) {
-        $(".aBox").addClass("stick");
-        $(".aBox").css("width", "100%");
-        $(".aBox").css("border-radius", "0px");
-        $(".imgB1").css("animation", "up 3.5s ease-in-out, side 1s ease-in-out infinite alternate");
-        $(".imgB2").css("animation", "up 2.6s ease-in-out, side 1s ease-in-out infinite alternate");
-        $(".imgB3").css("animation", "up 3.9s ease-in-out, side 1s ease-in-out infinite alternate");
-        $(".imgB4").css("animation", "up 3s ease-in-out, side 1s ease-in-out infinite alternate");
-    } else {
-        $(".aBox").css("width", "96%");
-        $(".aBox").removeClass("stick");
-        $(".aBox").css("border-radius", "10px");
-    }
-
-    // "Skills" Section
-    if (scroll > 1400 && scroll < 1650) {
-        $(".sBox").addClass("stick");
-        $(".sBox").css("width", "100%");
-        $(".sBox").css("border-radius", "0px");
-    } else {
-        $(".sBox").css("width", "96%");
-        $(".sBox").removeClass("stick");
-        $(".sBox").css("border-radius", "10px");
-
-    }
-
-    // "Academics" Section
-    if (scroll > 2350 && scroll < 2650) {
-        $(".acBox").addClass("stick");
-        $(".acBox").css("width", "100%");
-        $(".acBox").css("border-radius", "0px");
-    } else {
-        $(".acBox").css("width", "96%");
-        $(".acBox").removeClass("stick");
-        $(".acBox").css("border-radius", "10px");
-
-    }
-    //----- 1.2. ENDS here -----
 
     // ----- 1.3. Menu Icon Changes (linked to 2.) -----
     // If scroll is past 500 px, then: 

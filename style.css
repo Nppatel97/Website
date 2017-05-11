@@ -284,9 +284,10 @@ body {
     display: none;
 }
 
-#aboutDiv {
+#aboutDiv,
+#higher {
     font-family: 'Syncopate', sans-serif;
-    font-size: 45px;
+    font-size: 48px;
     padding: 30px 30px 5px 30px;
     font-weight: bolder;
     color: seagreen;
@@ -872,4 +873,73 @@ rightBox {
     color: white;
     transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
     transform: perspective(200px) translateZ(50px);
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #name {
+        font-size: 40px;
+        margin-left: 0px;
+    }
+    #subtext {
+        font-size: 18px;
+        margin-left: 0px;
+    }
+    .iBox,
+    .aBox,
+    .acBox,
+    .cBox,
+    .sBox {
+        width: 100%;
+        border-radius: 0;
+        margin: 25px 0 70px 0;
+    }
+    .iBox {
+        margin-top: 0;
+    }
+    .cBox {
+        margin-bottom: 0;
+    }
+    #dButton,
+    #higher,
+    #sliderHider,
+    #sliderHider2 {
+        display: none;
+    }
+    #aboutDiv,
+    #skillsDiv,
+    #academicsDiv,
+    #contactDiv {
+        font-size: 35px;
+    }
+    .imgA1,
+    .imgA4 {
+        width: 150px;
+        height: 150px;
+    }
+    .imgDivA1,
+    .imgDivA4 {
+        padding: 20px;
+    }
+    #para {
+        margin-bottom: 0px;
+        margin-right: 50px;
+        background: orange;
+    }
+    .imgs {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .myImg {
+        width: 90%;
+        height: auto;
+        overflow: hidden;
+        margin: 0 0 30px 50px;
+    }
+    .slideShow,
+    .paraBox,
+    .paraBox2,
+    .resume {
+        margin: 20px 0;
+    }
 }
