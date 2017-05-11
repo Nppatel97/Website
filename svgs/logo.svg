@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 110 103">
+<defs>
+    <style>
+        .path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 0;
+    animation: run 5s ease-in-out;
+}
+
+@keyframes run{
+    from{
+        stroke-dashoffset: 1500;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+    </style>
+</defs>
+<g>
+    <path class="path" fill-opacity="0" stroke-linecap="square" stroke-width="10" stroke="grey" d="M30,90 L30,40 L70,88 L70,34 L70,60 L100,40 L70,15"/>
+</g>
+</svg>
