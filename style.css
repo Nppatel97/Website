@@ -378,7 +378,7 @@ body {
     }
 }
 
-.myImg {
+.myImgDiv {
     position: absolute;
     top: 30px;
     width: 300px;
@@ -849,7 +849,7 @@ body {
     margin-bottom: 35px;
 }
 
-rightBox {
+.rightBox {
     transition: 0.5s ease;
 }
 
@@ -885,6 +885,9 @@ rightBox {
         font-size: 18px;
         margin-left: 0px;
     }
+    #logo {
+        display: none;
+    }
     .iBox,
     .aBox,
     .acBox,
@@ -903,7 +906,8 @@ rightBox {
     #dButton,
     #higher,
     #sliderHider,
-    #sliderHider2 {
+    #sliderHider2,
+    .imgsBubble {
         display: none;
     }
     #aboutDiv,
@@ -913,18 +917,30 @@ rightBox {
         font-size: 35px;
     }
     .imgA1,
+    .imgA2,
+    .imgA3,
     .imgA4 {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        border: 5px solid;
+        margin: 0;
+        padding: 0;
     }
     .imgDivA1,
+    .imgDivA2,
+    .imgDivA3,
     .imgDivA4 {
-        padding: 20px;
+        padding: 0px;
+        margin: 0;
+        height: auto;
+        opacity: 1;
+    }
+    .imgDivA3,
+    .imgDivA4 {
+        margin-top: 10px;
     }
     #para {
-        margin-bottom: 0px;
-        margin-right: 50px;
-        background: orange;
+        margin: 0px;
     }
     .imgs {
         margin-top: 10px;
@@ -933,13 +949,33 @@ rightBox {
     .myImg {
         width: 90%;
         height: auto;
-        overflow: hidden;
         margin: 0 0 30px 50px;
+    }
+    .myImgDiv {
+        overflow: hidden;
+        margin-bottom: 10px;
     }
     .slideShow,
     .paraBox,
     .paraBox2,
     .resume {
         margin: 20px 0;
+    }
+    .slideShow {
+        margin-bottom: 90px;
+    }
+    #slideName {
+        bottom: -80px;
+        left: 25%;
+        font-size: 20px;
+        color: black;
+    }
+    #left,
+    #right {
+        bottom: -50px;
+        right: 20%;
+    }
+    #left {
+        right: 180px;
     }
 }

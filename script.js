@@ -84,17 +84,16 @@ $(window).scroll(function() {
         $(".bar3").addClass("changeColor");
 
         // Display the 8 images from different perspectives by Animating their X, Y or Z axes
-        setTimeout(function() {
+        if (window.innerWidth > 768) {
             $(".imgDivA1").addClass("ImgAnimUp");
             $(".imgDivA2").addClass("ImgAnimRight");
             $(".imgDivA3").addClass("ImgAnimDown");
             $(".imgDivA4").addClass("ImgAnimIn");
-            $(".imgDivB1").addClass("ImgAnimLeft");
-            $(".imgDivB2").addClass("ImgAnimOut");
-            $(".imgDivB3").addClass("ImgAnimDown");
-            $(".imgDivB4").addClass("ImgAnimUp");
-        }, 4000);
+        }
 
+        if (window.innerWidth < 768) {
+            $(".imgs").html('<div class="container-fluid"> <div class="col-xs-6 imgDivA1"><img alt="Web Designer" src="images/web_design.jpg" class="imgA1" style="border-color: lightseagreen; " /><br>Free Time? Web Design!</div> <div class="col-xs-6 imgDivA2"><img alt="Always Keep Learning" src="images/learn.jpg" class="imgA2" style="border-color: yellowgreen;" /><br>You are always a student</div><div class="col-xs-6 imgDivA3"><img alt="Android Developer" src="images/android.jpg" class="imgA3" style="border-color: greenyellow;" /><br>Started Learning Android Development</div><div class="col-xs-6 imgDivA4"><img alt="Team Work" src="images/team_work.jpg" class="imgA4" style="border-color: goldenrod;" /><br>Best way to boost productivity, Teamwork.</div></div>')
+        }
     }
 
     // If scroll is less than 500px, then change the Menu Icon back to light
