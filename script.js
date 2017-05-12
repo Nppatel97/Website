@@ -103,43 +103,43 @@ $(window).scroll(function() {
         $(".bar3").removeClass("changeColor");
     }
     //----- 1.3. ENDS here -----
+    if (window.innerWidth > 768) {
+        //----- 1.4. This code changes the text in the button and the href value in the <a> tag. (linked to 6.) -----
+        // Performs changes in the Dynamic Down Button as follows:
 
-    //----- 1.4. This code changes the text in the button and the href value in the <a> tag. (linked to 6.) -----
-    // Performs changes in the Dynamic Down Button as follows:
+        // If scroll is less than 500px, then the target is set to reach the "About Me" Section
+        setTimeout(function() {
+            if (scroll < 200) {
+                $("#goDown").css("color", "seagreen");
+                $("#goDown").html('About Me <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>');
+                $("#dButton").attr("href", "#aboutDiv");
 
-    // If scroll is less than 500px, then the target is set to reach the "About Me" Section
-    setTimeout(function() {
-        if (scroll < 200) {
-            $("#goDown").css("color", "seagreen");
-            $("#goDown").html('About Me <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>');
-            $("#dButton").attr("href", "#aboutDiv");
+                // If scroll is between 500px and 1400px, then the target is set to reach the "Skills" Section
+            } else if (scroll > 300 && scroll < 400) {
+                $("#goDown").css("color", "midnightblue");
+                $("#goDown").html('Skills <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>');
+                $("#dButton").attr("href", "#skillsDiv");
 
-            // If scroll is between 500px and 1400px, then the target is set to reach the "Skills" Section
-        } else if (scroll > 300 && scroll < 400) {
-            $("#goDown").css("color", "midnightblue");
-            $("#goDown").html('Skills <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>');
-            $("#dButton").attr("href", "#skillsDiv");
+                // If scroll is between 1400px and 2000px, then the target is set to reach the "Projects" Section
+            } else if (scroll > 1000 && scroll < 1400) {
+                $("#goDown").css("color", "indianred").fadeIn("fast");
+                $("#goDown").html('Academics <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>').fadeIn("slow");
+                $("#dButton").attr("href", "#academicsDiv");
 
-            // If scroll is between 1400px and 2000px, then the target is set to reach the "Projects" Section
-        } else if (scroll > 1000 && scroll < 1400) {
-            $("#goDown").css("color", "indianred").fadeIn("fast");
-            $("#goDown").html('Academics <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>').fadeIn("slow");
-            $("#dButton").attr("href", "#academicsDiv");
+                // If scroll is between 2000px and 2200px, then the target is set to reach the "Academics" Section
+            } else if (scroll > 2000 && scroll < 2300) {
+                $("#goDown").css("color", "orange");
+                $("#goDown").html('Contact Me <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>');
+                $("#dButton").attr("href", "#contactDiv");
 
-            // If scroll is between 2000px and 2200px, then the target is set to reach the "Academics" Section
-        } else if (scroll > 2000 && scroll < 2300) {
-            $("#goDown").css("color", "orange");
-            $("#goDown").html('Contact Me <span id="dArrow" class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>');
-            $("#dButton").attr("href", "#contactDiv");
-
-            // If scroll is more than 2500px, then the target is set to reach back to top
-        } else if (scroll > 2900) {
-            $("#goDown").css("color", "darkolivegreen");
-            $("#goDown").html('Back To Top <span id="uArrow" class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>');
-            $("#dButton").attr("href", "#btt");
-        }
-    }, 700);
-
+                // If scroll is more than 2500px, then the target is set to reach back to top
+            } else if (scroll > 2900) {
+                $("#goDown").css("color", "darkolivegreen");
+                $("#goDown").html('Back To Top <span id="uArrow" class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>');
+                $("#dButton").attr("href", "#btt");
+            }
+        }, 700);
+    }
     //----- 1.4. ENDS here -----
 
     // 1.5. Animate the progress bars in "Skills" Section when the user scrolls past 750px
@@ -202,40 +202,79 @@ $('#menuOptions').click(function() {
 
 //--------------- 3. Smooth scroll for sections ------------------
 
-// "About Me" Section
-$(".aBox, #aboutOpt").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#aboutDiv").offset().top
-    }, 700);
-});
+if (window.innerWidth > 768) {
+    // "About Me" Section
+    $(".aBox, #aboutOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#aboutDiv").offset().top
+        }, 700);
+    });
 
-// "Skills" Section
-$(".sBox, #skillsOpt").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#skillsDiv").offset().top
-    }, 700);
-});
+    // "Skills" Section
+    $(".sBox, #skillsOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#skillsDiv").offset().top
+        }, 700);
+    });
 
-// "Academics" Section
-$(".acBox, #academicsOpt").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#academicsDiv").offset().top
-    }, 700);
-});
+    // "Academics" Section
+    $(".acBox, #academicsOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#academicsDiv").offset().top
+        }, 700);
+    });
 
-// "Contacts" Section
-$(".cBox, #contactOpt").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#contactDiv").offset().top
-    }, 700);
-});
+    // "Contacts" Section
+    $(".cBox, #contactOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#contactDiv").offset().top
+        }, 700);
+    });
 
-// "Back to Top" Button
-$(" .logoLayer, #bttOpt").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#btt").offset().top
-    }, 700);
-});
+    // "Back to Top" Button
+    $(" .logoLayer, #bttOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#btt").offset().top
+        }, 700);
+    });
+}
+
+if (window.innerWidth < 768) {
+    // "About Me" Section
+    $("#aboutOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#aboutDiv").offset().top
+        }, 700);
+    });
+
+    // "Skills" Section
+    $("#skillsOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#skillsDiv").offset().top
+        }, 700);
+    });
+
+    // "Academics" Section
+    $("#academicsOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#academicsDiv").offset().top
+        }, 700);
+    });
+
+    // "Contacts" Section
+    $("#contactOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#contactDiv").offset().top
+        }, 700);
+    });
+
+    // "Back to Top" Button
+    $(" .logoLayer, #bttOpt").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#btt").offset().top
+        }, 700);
+    });
+}
 
 // ------------X 3. ENDS here X--------------------------------------------------
 

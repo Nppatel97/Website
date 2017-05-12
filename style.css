@@ -887,8 +887,8 @@ body {
         margin-left: 0px;
         padding: 0;
     }
-    #logo {
-        margin-top: 2%;
+    #logoMini {
+        margin-top: 5px;
         min-height: 5%;
         min-width: 5%;
         width: 25%;
@@ -896,6 +896,9 @@ body {
         position: fixed;
         left: 45%;
         z-index: 100;
+    }
+    #menu {
+        right: 30px;
     }
     .iBox,
     .aBox,
