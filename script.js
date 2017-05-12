@@ -278,7 +278,7 @@ if (window.innerWidth < 768) {
 
 // ------------X 3. ENDS here X--------------------------------------------------
 
-//-------------- 4. Code for SlideShow (Still incomplete) -----------------------
+//-------------- 4. Code for SlideShow -----------------------
 
 // Variables
 var courseNames = ["ALGORITHMS", "HCI", "THEORY", "OS", "DBMS", "ANALYSIS"];
