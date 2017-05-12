@@ -878,15 +878,24 @@ body {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     #name {
-        font-size: 40px;
+        font-size: 45px;
         margin-left: 0px;
+        padding: 0;
     }
     #subtext {
-        font-size: 18px;
+        font-size: 20px;
         margin-left: 0px;
+        padding: 0;
     }
     #logo {
-        display: none;
+        margin-top: 2%;
+        min-height: 5%;
+        min-width: 5%;
+        width: 25%;
+        height: 25%;
+        position: fixed;
+        left: 45%;
+        z-index: 100;
     }
     .iBox,
     .aBox,
