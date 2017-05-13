@@ -888,6 +888,9 @@ body {
         margin-left: 0px;
         padding: 0;
     }
+    #menuShow {
+        right: 40px;
+    }
     #logo {
         display: none;
     }
