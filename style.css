@@ -176,7 +176,7 @@ body {
     background: white;
     border-radius: 10px;
     position: absolute;
-    /*transition: 3s ease;*/
+    transition: 3s ease;
     top: 80px;
     height: 110px;
     z-index: 2;
@@ -188,7 +188,7 @@ body {
     position: absolute;
     height: 110px;
     z-index: 2;
-    /*transition: 3s ease;*/
+    transition: 3s ease;
     background: white;
 }
 
