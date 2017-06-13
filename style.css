@@ -310,7 +310,7 @@ body {
     border-radius: 10px;
     transition: 0.5s ease;
     width: 96%;
-    padding-bottom: 0px !important;
+    padding-bottom: 30px !important;
     box-shadow: 0px 0px 30px 0px black;
 }
 
@@ -349,8 +349,9 @@ body {
     text-align: center;
     font-family: 'Delius', cursive;
     font-size: 12px;
-    margin-top: 50px;
+    /*margin-top: 30px;*/
     font-style: italic;
+    opacity: 0;
     transition: 1.5s ease;
 }
 
@@ -754,11 +755,18 @@ body {
 .paraBox {
     margin: 25px;
     font-size: 24px;
+    text-align: center;
 }
 
-.paraBox2 {
-    margin: 25px;
-    font-size: 24px;
+.fbText,
+.gpText,
+.ghText,
+.liText,
+.reText,
+.emaText {
+    padding: 5px 25px;
+    transition: 0.5s ease;
+    opacity: 0;
 }
 
 .fa {
@@ -823,6 +831,30 @@ body {
     transform: perspective(200px) translateZ(50px);
 }
 
+.fa-file-text-o {
+    background: seagreen;
+    color: white;
+    transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
+}
+
+.fa-file-text-o:hover {
+    color: white;
+    transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
+    transform: perspective(200px) translateZ(50px);
+}
+
+.fa-envelope-o {
+    background: #1C8BDC;
+    color: white;
+    transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
+}
+
+.fa-envelope-o:hover {
+    color: white;
+    transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
+    transform: perspective(200px) translateZ(50px);
+}
+
 .changeBackClr {
     transition: 0.5s ease;
 }
@@ -841,39 +873,15 @@ body {
 }
 
 .button {
-    margin: 0px 5px;
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: transparent;
 }
 
 .mailBox {
     padding: 25px;
     font-family: 'Syncopate', sans-serif;
     margin-bottom: 35px;
-}
-
-.rightBox {
-    transition: 0.5s ease;
-}
-
-.resume {
-    padding: 30px;
-    font-size: 30px;
-    font-weight: bold;
-    height: 100px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
-    transform: translate(0);
-    margin: 25px;
-    width: 200px;
-    background: seagreen;
-    font-family: 'Syncopate', sans-serif;
-}
-
-.resume:hover {
-    color: white;
-    transition: 0.7s cubic-bezier(0.6, 0, 0, 1);
-    transform: perspective(200px) translateZ(50px);
 }
 
 @media only screen and (max-width: 768px) {

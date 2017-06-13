@@ -47,6 +47,9 @@ $(window).scroll(function() {
             $(".aBox").removeClass("stick");
             $(".aBox").css("border-radius", "10px");
         }
+        setTimeout(function() {
+            $(".imgs").css("opacity", 1);
+        }, 4000);
 
         // "Skills" Section
         if (scroll > 1400 && scroll < 1650) {
@@ -61,7 +64,7 @@ $(window).scroll(function() {
         }
 
         // "Academics" Section
-        if (scroll > 2350 && scroll < 2650) {
+        if (scroll > 2250 && scroll < 2550) {
             $(".acBox").addClass("stick");
             $(".acBox").css("width", "100%");
             $(".acBox").css("border-radius", "0px");
@@ -133,8 +136,8 @@ $(window).scroll(function() {
                 $("#dButton").attr("href", "#contactDiv");
 
                 // If scroll is more than 2500px, then the target is set to reach back to top
-            } else if (scroll > 2900) {
-                $("#goDown").css("color", "darkolivegreen");
+            } else if (scroll > 2600) {
+                $("#goDown").css("display", "none");
                 $("#goDown").html('Back To Top <span id="uArrow" class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>');
                 $("#dButton").attr("href", "#btt");
             }
@@ -151,7 +154,7 @@ $(window).scroll(function() {
 
 });
 
-// 1.6 Background Scrolls slower than content
+// 1.6 Background Scrolls slower than content (Currently commented since it affects performance)
 
 // (function() {
 
@@ -170,6 +173,12 @@ $(window).scroll(function() {
 //     };
 
 // })();
+
+// 1.7 Change the layout of the Social Media icons in mobile in the Contacts Section.
+
+if (window.innerWidth < 768) {
+    $('#fb, #li, #gh, #gp, #re, #ema').attr("class", "col-xs-6");
+}
 
 // ------------X 1. ENDS here X----------------------------
 
@@ -458,14 +467,18 @@ $(".fa-facebook").mouseenter(function() {
     $(".paraBox").html("Check out my social life! It's mostly profile pictures tho'")
         .css("color", "white");
     $(".cBox").css("background", "#3B5998");
-    $(".rightBox, #contactDiv").css("color", "white");
+    $(".rightBox, #contactDiv, .fbText").css("color", "white");
+    $(".fbText").css("opacity", 1);
+    $(".fbText").css("transform", "translateY(-20px)");
 });
 
 $(".fa-linkedin").mouseenter(function() {
     $(".paraBox").html("Check this out if you plan to hire me! ;)")
         .css("color", "white");
     $(".cBox").css("background", "#0077B5");
-    $(".rightBox, #contactDiv").css("color", "white");
+    $(".rightBox, #contactDiv, .liText").css("color", "white");
+    $(".liText").css("opacity", 1);
+    $(".liText").css("transform", "translateY(-20px)");
 
 });
 
@@ -473,7 +486,9 @@ $(".fa-github").mouseenter(function() {
     $(".paraBox").html("Code Code Code! Check out how neatly I write my code")
         .css("color", "white");
     $(".cBox").css("background", "#323131");
-    $(".rightBox, #contactDiv").css("color", "white");
+    $(".rightBox, #contactDiv, .ghText").css("color", "white");
+    $(".ghText").css("opacity", 1);
+    $(".ghText").css("transform", "translateY(-20px)");
 
 });
 
@@ -481,31 +496,39 @@ $(".fa-google-plus").mouseenter(function() {
     $(".paraBox").html("¯\\_(ツ)_/¯")
         .css("color", "white");
     $(".cBox").css("background", "#DC4A38");
-    $(".rightBox, #contactDiv").css("color", "white");
+    $(".rightBox, #contactDiv, .gpText").css("color", "white");
+    $(".gpText").css("opacity", 1);
+    $(".gpText").css("transform", "translateY(-20px)");
 
 });
 
-$(".resume").mouseenter(function() {
+$(".fa-file-text-o").mouseenter(function() {
     $(".paraBox").html("Yay I'm being hired! I am, right?")
         .css("color", "white");
     $(".cBox").css("background", "seagreen");
-    $(".rightBox, #contactDiv").css("color", "white");
+    $(".rightBox, #contactDiv, .reText").css("color", "white");
+    $(".reText").css("opacity", 1);
+    $(".reText").css("transform", "translateY(-20px)");
 
 });
 
-$(".paraBox, .cBox").mouseenter(function() {
-    $(".paraBox").html("Social Media").css("color", "black");
-    $(".cBox").css("background", "white");
-    $("#contactDiv").css("color", "orange");
-    $(".rightBox").css("color", "black");
+$(".fa-envelope-o").mouseenter(function() {
+    $(".paraBox").html("Best way to contact me.(E-mail is np96380@gmail.com in case the button doesn't work)")
+        .css("color", "white");
+    $(".cBox").css("background", "#1C8BDC");
+    $(".rightBox, #contactDiv, .emaText").css("color", "white");
+    $(".emaText").css("opacity", 1);
+    $(".emaText").css("transform", "translateY(-20px)");
 
 });
 
-$(".changeBackClr, .resume").mouseleave(function() {
+$(".changeBackClr, .fa-facebook, .fa-envelope-o, .fa-linkedin, .fa-github, .fa-google-plus, .fa-file-text-o").mouseleave(function() {
     $(".paraBox").html("Social Media").css("color", "black");
     $(".cBox").css("background", "white");
     $("#contactDiv").css("color", "orange");
-    $(".rightBox").css("color", "black");
+    $(".rightBox, .paraBox2").css("color", "black");
+    $(".fbText, .gpText, .ghText, .liText, .reText, .emaText").css("opacity", 0);
+    $(".fbText, .gpText, .ghText, .liText, .reText, .emaText").css("transform", "translateY(20px)");
 
 
 });
