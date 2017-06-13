@@ -463,76 +463,85 @@ $("#goDown").click(function() {
 
 //------------------ 6. Smooth Scroll for the dynamic down button --------------
 
-if (window.innerWidth > 768) {
-    $(".fa-facebook").mouseenter(function() {
-        $(".paraBox").html("Check out my social life! It's mostly profile pictures tho'")
-            .css("color", "white");
-        $(".cBox").css("background", "#3B5998");
-        $(".rightBox, #contactDiv, .fbText").css("color", "white");
+$(".fa-facebook").mouseenter(function() {
+    $(".paraBox").html("Check out my social life! It's mostly profile pictures tho'")
+        .css("color", "white");
+    $(".cBox").css("background", "#3B5998");
+    $(".rightBox, #contactDiv, .fbText").css("color", "white");
+    if (window.innerWidth > 768) {
         $(".fbText").css("opacity", 1);
         $(".fbText").css("transform", "translateY(-20px)");
-    });
+    }
+});
 
-    $(".fa-linkedin").mouseenter(function() {
-        $(".paraBox").html("Check this out if you plan to hire me! ;)")
-            .css("color", "white");
-        $(".cBox").css("background", "#0077B5");
-        $(".rightBox, #contactDiv, .liText").css("color", "white");
+$(".fa-linkedin").mouseenter(function() {
+    $(".paraBox").html("Check this out if you plan to hire me! ;)")
+        .css("color", "white");
+    $(".cBox").css("background", "#0077B5");
+    $(".rightBox, #contactDiv, .liText").css("color", "white");
+    if (window.innerWidth > 768) {
         $(".liText").css("opacity", 1);
         $(".liText").css("transform", "translateY(-20px)");
+    }
+});
 
-    });
-
-    $(".fa-github").mouseenter(function() {
-        $(".paraBox").html("Code Code Code! Check out how neatly I write my code")
-            .css("color", "white");
-        $(".cBox").css("background", "#323131");
-        $(".rightBox, #contactDiv, .ghText").css("color", "white");
+$(".fa-github").mouseenter(function() {
+    $(".paraBox").html("Code Code Code! Check out how neatly I write my code")
+        .css("color", "white");
+    $(".cBox").css("background", "#323131");
+    $(".rightBox, #contactDiv, .ghText").css("color", "white");
+    if (window.innerWidth > 768) {
         $(".ghText").css("opacity", 1);
         $(".ghText").css("transform", "translateY(-20px)");
+    }
 
-    });
+});
 
-    $(".fa-google-plus").mouseenter(function() {
-        $(".paraBox").html("¯\\_(ツ)_/¯")
-            .css("color", "white");
-        $(".cBox").css("background", "#DC4A38");
-        $(".rightBox, #contactDiv, .gpText").css("color", "white");
+$(".fa-google-plus").mouseenter(function() {
+    $(".paraBox").html("¯\\_(ツ)_/¯")
+        .css("color", "white");
+    $(".cBox").css("background", "#DC4A38");
+    $(".rightBox, #contactDiv, .gpText").css("color", "white");
+    if (window.innerWidth > 768) {
         $(".gpText").css("opacity", 1);
         $(".gpText").css("transform", "translateY(-20px)");
+    }
+});
 
-    });
-
-    $(".fa-file-text-o").mouseenter(function() {
-        $(".paraBox").html("Yay I'm being hired! I am, right?")
-            .css("color", "white");
-        $(".cBox").css("background", "seagreen");
-        $(".rightBox, #contactDiv, .reText").css("color", "white");
+$(".fa-file-text-o").mouseenter(function() {
+    $(".paraBox").html("Yay I'm being hired! I am, right?")
+        .css("color", "white");
+    $(".cBox").css("background", "seagreen");
+    $(".rightBox, #contactDiv, .reText").css("color", "white");
+    if (window.innerWidth > 768) {
         $(".reText").css("opacity", 1);
         $(".reText").css("transform", "translateY(-20px)");
+    }
+});
 
-    });
-
-    $(".fa-envelope-o").mouseenter(function() {
-        $(".paraBox").html("Best way to contact me.(E-mail is np96380@gmail.com in case the button doesn't work)")
-            .css("color", "white");
-        $(".cBox").css("background", "#1C8BDC");
-        $(".rightBox, #contactDiv, .emaText").css("color", "white");
+$(".fa-envelope-o").mouseenter(function() {
+    $(".paraBox").html("Best way to contact me.(E-mail is np96380@gmail.com in case the button doesn't work)")
+        .css("color", "white");
+    $(".cBox").css("background", "#1C8BDC");
+    $(".rightBox, #contactDiv, .emaText").css("color", "white");
+    if (window.innerWidth > 768) {
         $(".emaText").css("opacity", 1);
         $(".emaText").css("transform", "translateY(-20px)");
+    }
 
-    });
+});
 
-    $(".changeBackClr, .fa-facebook, .fa-envelope-o, .fa-linkedin, .fa-github, .fa-google-plus, .fa-file-text-o").mouseleave(function() {
-        $(".paraBox").html("Social Media").css("color", "black");
-        $(".cBox").css("background", "white");
-        $("#contactDiv").css("color", "orange");
-        $(".rightBox, .paraBox2").css("color", "black");
+$(".changeBackClr, .fa-facebook, .fa-envelope-o, .fa-linkedin, .fa-github, .fa-google-plus, .fa-file-text-o").mouseleave(function() {
+    $(".paraBox").html("Social Media").css("color", "black");
+    $(".cBox").css("background", "white");
+    $("#contactDiv").css("color", "orange");
+    $(".rightBox, .paraBox2").css("color", "black");
+    if (window.innerWidth > 768) {
         $(".fbText, .gpText, .ghText, .liText, .reText, .emaText").css("opacity", 0);
         $(".fbText, .gpText, .ghText, .liText, .reText, .emaText").css("transform", "translateY(20px)");
+    }
 
+});
 
-    });
-}
 
 // -------------------X 6. ENDS here X-----------------
