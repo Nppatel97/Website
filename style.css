@@ -1027,4 +1027,21 @@ body {
     #backImg {
         width: auto;
     }
+    .fbText,
+    .gpText,
+    .ghText,
+    .liText,
+    .reText,
+    .emaText {
+        opacity: 1;
+        color: white;
+    }
+    footer {
+        z-index: -1;
+        text-align: center;
+    }
+    .changeBackClr {
+        background: transparent;
+        z-index: 50;
+    }
 }

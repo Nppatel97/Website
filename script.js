@@ -177,7 +177,7 @@ $(window).scroll(function() {
 // 1.7 Change the layout of the Social Media icons in mobile in the Contacts Section.
 
 if (window.innerWidth < 768) {
-    $('#fb, #li, #gh, #gp, #re, #ema').attr("class", "col-xs-6");
+    $('.fb, .li, .gh, .gp, .re, .ema').attr("class", "col-xs-6");
 }
 
 // ------------X 1. ENDS here X----------------------------
