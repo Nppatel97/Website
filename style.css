@@ -1044,4 +1044,8 @@ body {
         background: transparent;
         z-index: 50;
     }
+    .footerText {
+        text-align: center;
+        padding-top: 650px;
+    }
 }
